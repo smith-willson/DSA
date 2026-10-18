@@ -3,7 +3,8 @@ using namespace std;
 int main()
 {
     int size;
-
+    int smallestindex = 0;
+    int Largestindex = 0;
     cout << "What is the size of Array: ";
     cin >> size;
 
@@ -25,14 +26,16 @@ int main()
         if (num1[j] < small)
         {
             small = num1[j];
+            smallestindex = j;
         }
         if (num1[j] > large)
         {
             large = num1[j];
+            Largestindex = j;
         }
     }
-    cout << "largest = " << large << endl;
-    cout << "smallest = " << small << endl;
+    cout << "largest = " << Largestindex << endl;
+    cout << "smallest = " << smallestindex << endl;
 
     return 0;
 }
